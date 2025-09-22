@@ -24,3 +24,37 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@keyframes stripes {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 40px 40px; /* adjust speed/direction */
+  }
+}
+
+.stripes {
+  background-image: repeating-linear-gradient(
+    135deg,
+    #F26509,
+    #F26509 7px,
+    #e85c08 25px,
+    #e85c08 35px
+  );
+  animation: stripes 3s linear infinite;
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee {
+  display: inline-flex;
+  min-width: 100%;
+  animation: marquee 20s linear infinite;
+}
