@@ -2,8 +2,8 @@
 const articles = [
   {
     id: 1,
-    image: "/images/rema.png",
-    title: "Rema Scores New Certification With Efforts On Victony's 'Stubborn'",
+    image: "/images/victony.png",
+    title: "Victony Scores New Certification With Efforts On Victony's 'Stubborn'",
     author: "IAM NOONE",
     category: "MUSIC",
     time: "5 MINS AGO",
@@ -28,7 +28,7 @@ const articles = [
 
 export default function ContentGrid() {
   return (
-    <section className="mx-4 sm:mx-8 md:mx-12 lg:mx-24 mt-16">
+    <section className="mx-4 sm:mx-8 md:mx-12 lg:mx-24 mt-20">
       {/* Header */}
       <div className="mb-8">
         <p className="text-sm uppercase mb-2 tracking-widest text-white/50">
