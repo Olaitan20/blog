@@ -2,6 +2,7 @@ import TopBar from '@/components/TopBar';
 import Header from '../components/Header';
 import Hero from '@/components/Hero';
 import Headline from '@/components/Headline';
+import ContentGrid from '../components/ContentGrid';
 // import Hero from '../components/Hero';
 // import ContentGrid from '../components/ContentGrid';
 // import MerchSection from '../components/MerchSection';
@@ -51,6 +52,7 @@ export default function Home() {
       <Header />
       <Headline />
       <Hero />
+      <ContentGrid title="LATEST VIDEOS" items={videoItems} />
       {/* <Hero />
       <ContentGrid title="LATEST VIDEOS" items={videoItems} />
       <MerchSection />
