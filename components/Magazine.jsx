@@ -9,21 +9,21 @@ export default function Magazine() {
         </div>
         <div className=" grid grid-cols-3 gap-[5px] mb-[10px] ">
             <Image
-                src="/images/magazine.svg"
+                src="/images/magazine.png"
                 width="100"
                 height="100"
                 alt="add to cart"
                 className=" w-[413px] h-[586px]  "
             />
             <Image
-                src="/images/magazine2.svg"
+                src="/images/magazine2.png"
                 width="100"
                 height="100"
                 alt="add to cart"
                 className=" w-[413px] h-[586px]  "
             />
             <Image
-                src="/images/magazine.svg"
+                src="/images/magazine.png"
                 width="100"
                 height="100"
                 alt="add to cart"
