@@ -27,7 +27,7 @@ export default function Headline() {
         {/* "What's Hot?" label */}
         <div className="absolute left-0 top-0 h-full flex items-center gap-1 px-3 bg-gray-100 z-10">
           <Image
-            src="/icons/frame.svg"
+            src="/icons/fire.png"
             alt="Fire Icon"
             width={20}
             height={20}

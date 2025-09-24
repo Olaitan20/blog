@@ -4,6 +4,10 @@ import Hero from '@/components/Hero';
 import Headline from '@/components/Headline';
 import ContentGrid from '../components/ContentGrid';
 import Store from '../components/Store';
+import Latest from '@/components/Latest';
+import Magazine from '@/components/Magazine';
+import Sports from '@/components/Sports';
+import Footer from '@/components/Footer';
 // import Hero from '../components/Hero';
 // import ContentGrid from '../components/ContentGrid';
 // import MerchSection from '../components/MerchSection';
@@ -55,6 +59,11 @@ export default function Home() {
       <Hero />
       <ContentGrid title="LATEST VIDEOS" items={videoItems} />
       <Store/>
+      <Latest />
+      <Magazine />
+      <Sports />
+      <Sports />
+      <Footer />
       {/* <Hero />
       <ContentGrid title="LATEST VIDEOS" items={videoItems} />
       <MerchSection />
