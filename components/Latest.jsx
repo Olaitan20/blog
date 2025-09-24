@@ -47,7 +47,7 @@ export default function Latest() {
             className="bg-white hover:shadow-lg transition-shadow cursor-pointer group"
           >
             {/* Image */}
-            <div className="w-full h-48 md:h-56 lg:h-64 overflow-hidden">
+            <div className="w-full h-48 md:h-48 lg:h-50 overflow-hidden">
               <img
                 src={article.image}
                 alt={article.title}

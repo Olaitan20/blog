@@ -20,12 +20,12 @@ export default function Header() {
 
   return (
     <nav className="w-full px-4 md:px-12 lg:px-24 py-2">
-      <ul className="flex justify-center gap-x-12 gap-y-4 my-4">
+      <ul className="flex justify-center gap-x-10 gap-y-4 my-4">
         {navItems.map((item) => (
           <li
             key={item.id}
             onClick={() => setActive(item.id)}
-            className="flex items-center text-[14px] gap-1 cursor-pointer transition-colors"
+            className="flex items-center text-[14px] truncate gap-1 cursor-pointer transition-colors"
           >
             {/* Icon */}
             <Image

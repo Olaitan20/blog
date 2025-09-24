@@ -50,7 +50,7 @@ export default function Store() {
 
         <button
           onClick={() => setCheckoutOpen(true)}
-          className="relative flex items-center gap-2 bg-orange-600 text-sm text-white px-4 py-2 rounded-full"
+          className="relative flex items-center gap-2 bg-[#F26509] text-sm text-white px-4 py-2 rounded-full"
         >
           <Image src="/icons/cart.svg" alt="Cart" width={18} height={18} />
           {cartCount > 0 && (
@@ -110,11 +110,11 @@ export default function Store() {
       {/* Checkout Modal */}
       {isCheckoutOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-60 flex justify-center items-center z-50"
+          className="fixed inset-0 bg-black/30 backdrop-blur-sm bg-opacity-50 flex justify-center items-center z-50"
           onClick={() => setCheckoutOpen(false)}
         >
           <div
-            className="bg-white text-black p-6 rounded-lg w-full max-w-lg max-h-[80vh] overflow-y-auto"
+            className="bg-white text-black p-6  w-full max-w-lg max-h-[80vh] overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
             <h2 className="text-xl font-bold mb-4">Checkout</h2>
@@ -163,13 +163,13 @@ export default function Store() {
                 <div className="mt-6 flex justify-end gap-4">
                   <button
                     onClick={() => setCheckoutOpen(false)}
-                    className="px-4 py-2 border rounded"
+                    className="px-4 py-2 border"
                   >
                     Close
                   </button>
                   <button
                     onClick={() => alert("Proceed to payment (to be added)")}
-                    className="px-4 py-2 bg-orange-600 text-white rounded"
+                    className="px-4 py-2 bg-[#F26509] text-white"
                   >
                     Checkout
                   </button>
