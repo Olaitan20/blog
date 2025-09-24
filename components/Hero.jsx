@@ -61,12 +61,6 @@ const news = [
     category: "FASHION",
     time: "3 HR AGO",
   },
-  {
-    title: "How Nollywood Is Changing Global Cinema",
-    author: "IFEOMA OBI",
-    category: "NEWS",
-    time: "4 HR AGO",
-  },
 ];
 
 export default function Hero() {
@@ -100,9 +94,9 @@ export default function Hero() {
 
   return (
     <div className="mx-4 md:mx-12 lg:mx-24 mt-1 flex gap-4 text-white">
-      {/* Left: Slideshow */}
+      {/* Left: Slideshow (3/4 width on desktop) */}
       <div
-        className="relative w-full md:w-[820px] overflow-hidden"
+        className="relative w-full md:w-3/4 overflow-hidden"
         onMouseEnter={() => setPaused(true)}
         onMouseLeave={() => setPaused(false)}
       >
@@ -119,7 +113,7 @@ export default function Hero() {
           />
 
           {/* Captions BELOW the image */}
-          <div className="p">
+          <div className="p-2">
             <p className="text-xs md:text-sm uppercase tracking-widest text-white/50 mb-2">
               {slides[index].subtitle}
             </p>
@@ -131,30 +125,10 @@ export default function Hero() {
             </p>
           </div>
         </div>
-
-        {/* Dot Indicators */}
-        {/* <div className="absolute bottom-4 w-full flex justify-center space-x-3">
-          {slides.map((_, i) => (
-            <div
-              key={i}
-              className="w-4 h-4 rounded-full bg-gray-700 flex items-center justify-center overflow-hidden"
-            >
-              {i === index && (
-                <div
-                  className="h-2 bg-white rounded-full"
-                  style={{
-                    width: `${progress}%`,
-                    transition: "width 0.1s linear",
-                  }}
-                />
-              )}
-            </div>
-          ))}
-        </div> */}
       </div>
 
-      {/* Right: News List */}
-      <div className="hidden md:flex flex-1 flex-col p-2 max-h-[40vh]">
+      {/* Right: News List (1/4 width on desktop) */}
+      <div className="hidden md:flex w-1/4 flex-col p-2 max-h-[50vh]">
         {news.map((item, i) => (
           <div
             key={i}
@@ -170,3 +144,4 @@ export default function Hero() {
     </div>
   );
 }
+
