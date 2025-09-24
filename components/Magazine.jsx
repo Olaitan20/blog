@@ -2,41 +2,52 @@ import Image from "next/image";
 
 export default function Magazine() {
   return (
-    <section className="mx-[110px] ">
-        <div className="py-[32px]">
-            <p className="text-[14px] uppercase mb-[8px] tracking-widest text-[#FFFFFF80]">/// ORANGE MAG</p>
-            <p className="text-[16px] uppercase font-[800]">Read Orange Mag</p>
+    <section className="mx-28">
+      <div className="py-8">
+        <p className="text-sm uppercase mb-2 tracking-widest text-white/50">
+          /// ORANGE MAG
+        </p>
+        <p className="text-base uppercase font-extrabold">Read Orange Mag</p>
+      </div>
+
+      {/* No gap, full quality images */}
+      <div className="grid grid-cols-3 gap-0 mb-6">
+        <div className="relative w-full h-[586px]">
+          <Image
+            src="/images/magazine.png"
+            alt="magazine cover"
+            fill
+            className="object-cover"
+            quality={100}
+            priority
+          />
         </div>
-        <div className=" grid grid-cols-3 gap-[5px] mb-[10px] ">
-            <Image
-                src="/images/magazine.png"
-                width="100"
-                height="100"
-                alt="add to cart"
-                className=" w-[413px] h-[586px]  "
-            />
-            <Image
-                src="/images/magazine2.png"
-                width="100"
-                height="100"
-                alt="add to cart"
-                className=" w-[413px] h-[586px]  "
-            />
-            <Image
-                src="/images/magazine.png"
-                width="100"
-                height="100"
-                alt="add to cart"
-                className=" w-[413px] h-[586px]  "
-            />
+        <div className="relative w-full h-[586px]">
+          <Image
+            src="/images/magazine2.png"
+            alt="magazine cover"
+            fill
+            className="object-cover"
+            quality={100}
+          />
         </div>
-        {/* View More */}
+        <div className="relative w-full h-[586px]">
+          <Image
+            src="/images/magazine.png"
+            alt="magazine cover"
+            fill
+            className="object-cover"
+            quality={100}
+          />
+        </div>
+      </div>
+
+      {/* View More */}
       <div className="flex justify-center mb-6">
         <p className="text-sm font-medium text-white/80 cursor-pointer hover:underline">
           View more
         </p>
       </div>
-      
     </section>
   );
 }
