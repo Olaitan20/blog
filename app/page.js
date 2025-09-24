@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import Hero from '@/components/Hero';
 import Headline from '@/components/Headline';
 import ContentGrid from '../components/ContentGrid';
+import Store from '../components/Store';
 // import Hero from '../components/Hero';
 // import ContentGrid from '../components/ContentGrid';
 // import MerchSection from '../components/MerchSection';
@@ -53,6 +54,7 @@ export default function Home() {
       <Headline />
       <Hero />
       <ContentGrid title="LATEST VIDEOS" items={videoItems} />
+      <Store/>
       {/* <Hero />
       <ContentGrid title="LATEST VIDEOS" items={videoItems} />
       <MerchSection />
