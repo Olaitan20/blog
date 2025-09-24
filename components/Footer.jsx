@@ -28,12 +28,11 @@ export default function Footer() {
           <form className="flex w-full">
             <input
               type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-4 py-3 text-black rounded-l-md focus:outline-none"
+              className="flex-1 px-4 py-3 text-black bg-white  focus:outline-none"
             />
             <button
               type="submit"
-              className="bg-black px-6 py-3 font-bold uppercase rounded-r-md"
+              className="bg-black px-6 py-3 font-bold uppercase "
             >
               Submit
             </button>
