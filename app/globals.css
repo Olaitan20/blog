@@ -11,7 +11,7 @@ p, li {
   font-family: var(--font-inter), sans-serif;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, button{
   font-family: var(--font-bebas-neue), sans-serif;
 }
 

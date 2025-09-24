@@ -42,10 +42,10 @@ export default function Store() {
       {/* Header with Cart Button */}
       <div className="pb-8 flex justify-between items-center">
         <div>
-          <p className="text-sm uppercase mb-2 tracking-widest text-white/50">
+          <p className="text-[12px] uppercase mb-2 tracking-widest text-white/50">
             /// shop
           </p>
-          <p className="text-lg uppercase font-extrabold">Stop by the store</p>
+          <p className="text-[16px] uppercase font-extrabold">Stop by the store</p>
         </div>
 
         <button
@@ -75,14 +75,14 @@ export default function Store() {
               className="w-full h-48 object-contain mb-3"
             />
 
-            <p className="text-sm font-medium text-left w-full min-h-[20px]">
+            <p className="text-[12px] font-medium text-left w-full min-h-[20px]">
               {product.name}
             </p>
 
             <div className="flex-1" />
 
             <div className="flex justify-between items-center w-full mt-3">
-              <p className="text-gray-500 text-sm font-medium">
+              <p className="text-gray-500 text-[12px] font-medium">
                 ₦{product.price.toLocaleString()}
               </p>
               <button

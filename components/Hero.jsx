@@ -113,14 +113,14 @@ export default function Hero() {
           />
 
           {/* Captions BELOW the image */}
-          <div className="p-2">
-            <p className="text-xs md:text-sm uppercase tracking-widest text-white/50 mb-2">
+          <div className="p-2 mt-4">
+            <p className="text-xs md:text-[12px] uppercase tracking-widest text-white/50 mb-[8px]">
               {slides[index].subtitle}
             </p>
-            <p className="text-base md:text-lg font-semibold">
+            <p className="text-[14px] md:text-[16px] font-semibold">
               {slides[index].title}
             </p>
-            <p className="text-xs md:text-sm mt-2 text-white/50">
+            <p className="text-xs md:text-[12px] mt-[8px] text-white/50">
               {slides[index].details}
             </p>
           </div>
@@ -128,14 +128,14 @@ export default function Hero() {
       </div>
 
       {/* Right: News List (1/4 width on desktop) */}
-      <div className="hidden md:flex w-1/4 flex-col p-2 max-h-[50vh]">
+      <div className="hidden md:flex w-1/4 flex-col p-2 max-h-[40vh]">
         {news.map((item, i) => (
           <div
             key={i}
             className="my-3 pb-2 cursor-pointer hover:opacity-80 transition"
           >
-            <p className="text-sm font-semibold line-clamp-2">{item.title}</p>
-            <p className="text-xs text-white/50 mt-2">
+            <p className="text-[14px] font-semibold line-clamp-2">{item.title}</p>
+            <p className="text-[12px] text-white/50 mt-[8px]">
               {item.author} • {item.category} • {item.time}
             </p>
           </div>

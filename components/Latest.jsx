@@ -31,10 +31,10 @@ export default function Latest() {
     <section className="mx-4 sm:mx-8 md:mx-12 lg:mx-24 mt-10">
       {/* Header */}
       <div className="mb-8">
-        <p className="text-sm uppercase mb-2 tracking-widest text-white/50">
+        <p className="text-[12px] uppercase mb-2 tracking-widest text-white/50">
           /// MUSIC
         </p>
-        <p className="text-base md:text-lg uppercase font-extrabold text-white">
+        <p className="text-base md:text-[16px] uppercase font-extrabold text-white">
           LATEST IN THE WORLD OF MUSIC
         </p>
       </div>
@@ -57,15 +57,15 @@ export default function Latest() {
 
             {/* Text Content */}
             <div className="p-4 md:p-6">
-              <h3 className="text-sm md:text-base font-bold text-black mb-3 truncate group-hover:underline leading-tight line-clamp-3">
+              <p className="text-sm md:text-[16px] font-bold text-black mb-3 truncate leading-tight line-clamp-3">
                 {article.title}
-              </h3>
+              </p>
               <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-0">
-                <span className="text-xs text-gray-600 font-medium">{article.author}</span>
+                <span className="text-[12px] text-black/50 font-medium">{article.author}</span>
                 <span className="hidden sm:inline text-xs text-gray-400 mx-2">•</span>
-                <span className="text-xs text-gray-600 font-medium">{article.category}</span>
+                <span className="text-[12px] text-black/50 font-medium">{article.category}</span>
                 <span className="hidden sm:inline text-xs text-gray-400 mx-2">•</span>
-                <span className="text-xs text-gray-400">{article.time}</span>
+                <span className="text-[12px] text-black/50">{article.time}</span>
               </div>
             </div>
           </div>
@@ -74,7 +74,7 @@ export default function Latest() {
 
       {/* View More */}
       <div className="flex justify-center my-6">
-        <p className="text-sm font-medium text-white/80 cursor-pointer hover:underline">
+        <p className="text-[12px] font-medium text-white cursor-pointer hover:underline">
           View more
         </p>
       </div>

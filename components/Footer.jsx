@@ -17,10 +17,10 @@ export default function Footer() {
       {/* Container to push content right */}
       <div className="container mr-24 mx-auto flex justify-end">
         <div className="relative  max-w-lg">
-          <h2 className="text-3xl md:text-4xl text-end font-extrabold mb-2 uppercase">
+          <h2 className="text-3xl md:text-7xl text-end font-extrabold mb-2 uppercase">
             Signup For Our Newsletter
           </h2>
-          <p className="text-sm text-end text-white/80 mb-6">
+          <p className="text-[12px] uppercase text-end text-white/80 mb-6">
             Signup for blah blah blah! Text goes here.
           </p>
 
@@ -32,7 +32,7 @@ export default function Footer() {
             />
             <button
               type="submit"
-              className="bg-black px-6 py-3 font-bold uppercase "
+              className="bg-black text-[24px] px-6 py-3 font-bold uppercase "
             >
               Submit
             </button>

@@ -4,10 +4,10 @@ export default function Magazine() {
   return (
     <section className="mx-28">
       <div className="py-8">
-        <p className="text-sm uppercase mb-2 tracking-widest text-white/50">
+        <p className="text-[12px] uppercase mb-2 tracking-widest text-white/50">
           /// ORANGE MAG
         </p>
-        <p className="text-base uppercase font-extrabold">Read Orange Mag</p>
+        <p className="text-[16px] uppercase font-extrabold">Read Orange Mag</p>
       </div>
 
       {/* No gap, full quality images */}
@@ -44,7 +44,7 @@ export default function Magazine() {
 
       {/* View More */}
       <div className="flex justify-center mb-6">
-        <p className="text-sm font-medium text-white/80 cursor-pointer hover:underline">
+        <p className="text-[12px] font-medium text-white cursor-pointer hover:underline">
           View more
         </p>
       </div>
