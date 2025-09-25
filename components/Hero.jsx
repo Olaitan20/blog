@@ -1,5 +1,9 @@
 "use client";
+import Link from "next/link";
 import { useState, useEffect } from "react";
+
+const slugify = (text) =>
+  text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)+/g, "");
 
 const slides = [
   {
@@ -93,7 +97,7 @@ export default function Hero() {
   }, [paused, index]);
 
   return (
-    <div className="mx-4 md:mx-12 lg:mx-24 mt-1 flex gap-4 text-white">
+    <div className="md:mx-12 lg:mx-24 md:mt-1 flex gap-4 text-white">
       {/* Left: Slideshow (3/4 width on desktop) */}
       <div
         className="relative w-full md:w-3/4 overflow-hidden"
@@ -106,14 +110,17 @@ export default function Hero() {
             animating ? "opacity-0 translate-x-12" : "opacity-100 translate-x-0"
           }`}
         >
-          <img
-            src={slides[index].image}
-            alt={slides[index].title}
-            className="w-full h-[50vh] object-cover"
-          />
+          {/* Make the slide clickable */}
+          <Link href={`/article/${slugify(slides[index].title)}`}>
+            <img
+              src={slides[index].image}
+              alt={slides[index].title}
+              className="w-full h-[50vh] object-cover cursor-pointer"
+            />
+          </Link>
 
           {/* Captions BELOW the image */}
-          <div className="p-2 mt-4">
+          <div className="p-2 mt-4 mb-6 md:mb-0">
             <p className="text-xs md:text-[12px] uppercase tracking-widest text-white/50 mb-[8px]">
               {slides[index].subtitle}
             </p>
@@ -130,18 +137,22 @@ export default function Hero() {
       {/* Right: News List (1/4 width on desktop) */}
       <div className="hidden md:flex w-1/4 flex-col p-2 max-h-[40vh]">
         {news.map((item, i) => (
-          <div
+          <Link
             key={i}
-            className="my-3 pb-2 cursor-pointer hover:opacity-80 transition"
+            href={`/article/${slugify(item.title)}`}
+            className="my-3 pb-2 cursor-pointer hover:opacity-80 transition block"
           >
-            <p className="text-[14px] font-semibold line-clamp-2">{item.title}</p>
+            <p className="text-[14px] font-semibold line-clamp-2">
+              {item.title}
+            </p>
             <p className="text-[12px] text-white/50 mt-[8px]">
               {item.author} • {item.category} • {item.time}
             </p>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
   );
 }
+
 

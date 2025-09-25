@@ -38,19 +38,19 @@ export default function Store() {
   );
 
   return (
-    <div className="mx-4 sm:mx-8 md:mx-12 lg:mx-24 mt-10 py-16">
+    <div className="bg-white md:bg-transparent sm:mx-8 md:mx-12 lg:mx-24 my-10 pt-8">
       {/* Header with Cart Button */}
-      <div className="pb-8 flex justify-between items-center">
+      <div className="pb-4 md:pb-8 px-4 md:px-0 flex justify-between items-center">
         <div>
-          <p className="text-[12px] uppercase mb-2 tracking-widest text-white/50">
+          <p className="text-[12px] uppercase mb-1 tracking-widest text-black md:text-white/50">
             /// shop
           </p>
-          <p className="text-[16px] uppercase font-extrabold">Stop by the store</p>
+          <p className="text-[16px] uppercase font-extrabold text-black md:text-white">Stop by the store</p>
         </div>
 
         <button
           onClick={() => setCheckoutOpen(true)}
-          className="relative flex items-center gap-2 bg-[#F26509] text-sm text-white px-4 py-2 rounded-full"
+          className="relative flex items-center gap-2 bg-black md:bg-[#F26509] text-sm text-white px-4 py-2 rounded-full"
         >
           <Image src="/icons/cart.svg" alt="Cart" width={18} height={18} />
           {cartCount > 0 && (
@@ -63,7 +63,7 @@ export default function Store() {
       </div>
 
       {/* Product Grid (inside one white container, no gaps) */}
-      <div className="bg-white grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 divide-x divide-y divide-gray-200 text-black">
+      <div className="bg-[#F7F7F7] grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 divide-x divide-y divide-gray-200 text-black">
         {products.map((product) => (
           <div
             key={product.id}
@@ -102,7 +102,7 @@ export default function Store() {
       </div>
 
       {/* Visit shop footer */}
-      <div className="text-center flex items-center justify-center gap-2 capitalize text-sm mt-6 font-medium cursor-pointer hover:underline">
+      <div className="text-center py-4 bg-black flex items-center justify-center gap-2 capitalize text-sm mt-6 font-medium cursor-pointer hover:underline">
         <p>Visit shop</p>
         <Image src="/icons/right.svg" width={20} height={20} alt="visit shop" />
       </div>

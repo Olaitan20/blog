@@ -40,8 +40,11 @@ export default function RootLayout({ children }) {
       <body className={`${inter.variable} ${bebasNeue.variable}`}>
         {/* Global Components */}
         <TopBar />
+        {/* <div className="hidden md:block">
+
+        <Headline  />
+        </div> */}
         <Header />
-        <Headline />
 
         {/* Page-Specific Content */}
         {children}

@@ -5,6 +5,7 @@ import Latest from "@/components/Latest";
 import Magazine from "@/components/Magazine";
 import Sports from "@/components/Sports";
 import Footer from "@/components/Footer";
+import Headline from "@/components/Headline";
 
 export default function Home() {
   const videoItems = [
@@ -27,7 +28,15 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
+      <div className="hidden md:block">
+
+      <Headline />
+      </div>
       <Hero />
+      <div className=" md:hidden">
+
+      <Headline />
+      </div>
       <ContentGrid title="LATEST VIDEOS" items={videoItems} />
       <Store />
       <Latest />

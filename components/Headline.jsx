@@ -22,7 +22,7 @@ export default function Headline() {
   }, []);
 
   return (
-    <div className="relative bg-gray-100 mx-12 md:mx-24 text-black text-sm border border-gray-200 overflow-hidden">
+    <div className="relative bg-[#F2F2F2]  md:mx-24 text-black text-sm border border-gray-200 overflow-hidden">
       <div className="flex items-center py-3">
         {/* "What's Hot?" label */}
         <div className="absolute left-0 top-0 h-full flex items-center gap-1 px-3 bg-gray-100 z-10">

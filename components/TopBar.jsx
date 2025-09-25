@@ -32,18 +32,18 @@ const TopBar = () => {
   }, []);
 
   return (
-    <div className="relative border-b border-white/5 py-2.5 text-white stripes">
-      <div className="mx-4 md:mx-12 lg:mx-24 flex justify-between items-center">
+    <div className="relative border-b border-white/5 py-2 md:py-2.5 text-white stripes">
+      <div className="mx-4 md:mx-12 lg:mx-24 flex items-center justify-center md:justify-between">
         {/* Date / Time */}
-        <h2 className="text-base">{dateTime}</h2>
+        <h2 className="text-base hidden md:block">{dateTime}</h2>
 
         {/* Title */}
-        <h1 className="text-center font-bold text-xl tracking-wide">
+        <h1 className="text-center font-bold text-xl tracking-tighter flex-1 md:flex-none">
           The 49TH STREET
         </h1>
 
         {/* Spotify */}
-        <div className="flex items-center gap-1">
+        <div className="hidden md:flex items-center gap-1">
           <Image
             src="/icons/spotify.svg"
             alt="Spotify Icon"
@@ -59,3 +59,4 @@ const TopBar = () => {
 };
 
 export default TopBar;
+

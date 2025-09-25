@@ -19,13 +19,22 @@ export default function Header() {
   const [active, setActive] = useState("feed");
 
   return (
-    <nav className="w-full px-4 md:px-12 lg:px-24 py-2">
-      <ul className="flex justify-center gap-x-12 gap-y-4 my-4">
+    <nav className="w-full px-2 md:px-12 lg:px-24 py-2">
+      <ul
+        className="
+          flex 
+          gap-x-6 md:gap-x-12 gap-y-4 my-4
+          overflow-x-auto md:overflow-visible
+          whitespace-nowrap
+          justify-start md:justify-center
+          scrollbar-hide
+        "
+      >
         {navItems.map((item) => (
           <li
             key={item.id}
             onClick={() => setActive(item.id)}
-            className="flex items-center text-[12px] truncate gap-1 cursor-pointer transition-colors"
+            className="flex items-center text-[12px] gap-1 cursor-pointer transition-colors px-1"
           >
             {/* Icon */}
             <Image
@@ -54,3 +63,4 @@ export default function Header() {
     </nav>
   );
 }
+
