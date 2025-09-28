@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Magazine() {
   return (
-    <section className="mx-28">
+    <section className="hidden md:block mx-28">
       <div className="py-8">
         <p className="text-[12px] uppercase mb-2 tracking-widest text-white/50">
           /// ORANGE MAG
