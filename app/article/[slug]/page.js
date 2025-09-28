@@ -26,9 +26,10 @@ export default function ArticlePage({ params }) {
       </div>
 
       {/* Metadata */}
-      <p className="uppercase text-[12px] text-white/50 mb-2">
-        /// {article.category}
-      </p>
+     <p className="uppercase text-[12px] text-white/50 mb-2">
+        {"///"} {article.category}
+    </p>
+
       <p className="text-2xl md:text-[40px] font-extrabold mb-2">
         {article.title}
       </p>
