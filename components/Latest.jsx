@@ -28,20 +28,20 @@ const articles = [
 
 export default function Latest() {
   return (
+    // Wrapper that changes background depending on screen size
     <div className="bg-white md:bg-transparent">
-
-        <section className="mx-4 sm:mx-8 md:mx-12 lg:mx-24 mt-10">
+      <section className="sm:mx-8 md:mx-12 lg:mx-24 pt-[24px] md:pt-0 md:mt-20">
         {/* Header */}
-        <div className="mb-8 md:mb-8 px-4 md:px-0">
-            <p className="text-[12px] uppercase mb-2 tracking-widest text-white/50">
+        <div className="mb-4 md:mb-8 px-4 md:px-0">
+          <p className="text-[12px] uppercase mb-1 tracking-widest text-black md:text-white/50">
             /// MUSIC
-            </p>
-            <p className="text-base md:text-[16px] uppercase font-extrabold text-white">
-            LATEST IN THE WORLD OF MUSIC
-            </p>
+          </p>
+          <p className="text-base md:text-[16px] uppercase font-extrabold text-black md:text-white">
+            Latest in the world of music
+          </p>
         </div>
 
-                {/* Articles Grid - NO GAPS */}
+        {/* Articles Grid - NO GAPS */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           {articles.map((article) => (
             <div
@@ -81,13 +81,7 @@ export default function Latest() {
             </div>
           ))}
         </div>
-        {/* View More */}
-        <div className="flex justify-center my-6">
-            <p className="text-[12px] font-medium text-white cursor-pointer hover:underline">
-            View more
-            </p>
-        </div>
-        </section>
+      </section>
     </div>
   );
 }
