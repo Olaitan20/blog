@@ -41,39 +41,46 @@ export default function Latest() {
             </p>
         </div>
 
-        {/* Articles Grid */}
+                {/* Articles Grid - NO GAPS */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-            {articles.map((article) => (
+          {articles.map((article) => (
             <div
-                key={article.id}
-                className="bg-white hover:shadow-lg transition-shadow cursor-pointer group"
+              key={article.id}
+              className="bg-white hover:shadow-lg transition-shadow cursor-pointer group"
             >
-                {/* Image */}
-                <div className="w-full h-48 md:h-48 lg:h-50 overflow-hidden">
+              {/* Image */}
+              <div className="w-full h-48 md:h-48 lg:h-50 overflow-hidden">
                 <img
-                    src={article.image}
-                    alt={article.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  src={article.image}
+                  alt={article.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
-                </div>
+              </div>
 
-                {/* Text Content */}
-                <div className="p-4 md:p-6">
-                <p className="text-sm md:text-[16px] font-bold text-black mb-3 truncate leading-tight line-clamp-3">
-                    {article.title}
+              {/* Text Content */}
+              <div className="p-4 md:p-6">
+                <p className="text-sm md:text-[16px] font-bold text-black mb-3 leading-tight truncate">
+                  {article.title}
                 </p>
-                <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-0">
-                    <span className="text-[12px] text-black/50 font-medium">{article.author}</span>
-                    <span className="hidden sm:inline text-xs text-gray-400 mx-2">•</span>
-                    <span className="text-[12px] text-black/50 font-medium">{article.category}</span>
-                    <span className="hidden sm:inline text-xs text-gray-400 mx-2">•</span>
-                    <span className="text-[12px] text-black/50">{article.time}</span>
+                <div className="flex sm:flex-row sm:items-center gap-1 sm:gap-0">
+                  <span className="text-[12px] text-black/50 font-medium">
+                    {article.author}
+                  </span>
+                  <span className="hidden sm:inline text-xs text-gray-400 mx-2">
+                    •
+                  </span>
+                  <span className="text-[12px] text-black/50 font-medium">
+                    {article.category}
+                  </span>
+                  <span className="hidden sm:inline text-xs text-gray-400 mx-2">
+                    •
+                  </span>
+                  <span className="text-[12px] text-black/50">{article.time}</span>
                 </div>
-                </div>
+              </div>
             </div>
-            ))}
+          ))}
         </div>
-
         {/* View More */}
         <div className="flex justify-center my-6">
             <p className="text-[12px] font-medium text-white cursor-pointer hover:underline">
