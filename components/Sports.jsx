@@ -36,7 +36,7 @@ export default function Sports() {
             /// SPORTS
           </p>
           <p className="text-base md:text-[16px] uppercase font-extrabold text-black md:text-white">
-            Latest in the world of music
+            Latest in the world of sports
           </p>
         </div>
 
