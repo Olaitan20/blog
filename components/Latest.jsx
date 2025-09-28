@@ -28,56 +28,59 @@ const articles = [
 
 export default function Latest() {
   return (
-    <section className="mx-4 sm:mx-8 md:mx-12 lg:mx-24 mt-10">
-      {/* Header */}
-      <div className="mb-8">
-        <p className="text-[12px] uppercase mb-2 tracking-widest text-white/50">
-          /// MUSIC
-        </p>
-        <p className="text-base md:text-[16px] uppercase font-extrabold text-white">
-          LATEST IN THE WORLD OF MUSIC
-        </p>
-      </div>
+    <div className="bg-white md:bg-transparent">
 
-      {/* Articles Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-        {articles.map((article) => (
-          <div
-            key={article.id}
-            className="bg-white hover:shadow-lg transition-shadow cursor-pointer group"
-          >
-            {/* Image */}
-            <div className="w-full h-48 md:h-48 lg:h-50 overflow-hidden">
-              <img
-                src={article.image}
-                alt={article.title}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-              />
+        <section className="mx-4 sm:mx-8 md:mx-12 lg:mx-24 mt-10">
+        {/* Header */}
+        <div className="mb-8 md:mb-8 px-4 md:px-0">
+            <p className="text-[12px] uppercase mb-2 tracking-widest text-white/50">
+            /// MUSIC
+            </p>
+            <p className="text-base md:text-[16px] uppercase font-extrabold text-white">
+            LATEST IN THE WORLD OF MUSIC
+            </p>
+        </div>
+
+        {/* Articles Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+            {articles.map((article) => (
+            <div
+                key={article.id}
+                className="bg-white hover:shadow-lg transition-shadow cursor-pointer group"
+            >
+                {/* Image */}
+                <div className="w-full h-48 md:h-48 lg:h-50 overflow-hidden">
+                <img
+                    src={article.image}
+                    alt={article.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                </div>
+
+                {/* Text Content */}
+                <div className="p-4 md:p-6">
+                <p className="text-sm md:text-[16px] font-bold text-black mb-3 truncate leading-tight line-clamp-3">
+                    {article.title}
+                </p>
+                <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-0">
+                    <span className="text-[12px] text-black/50 font-medium">{article.author}</span>
+                    <span className="hidden sm:inline text-xs text-gray-400 mx-2">•</span>
+                    <span className="text-[12px] text-black/50 font-medium">{article.category}</span>
+                    <span className="hidden sm:inline text-xs text-gray-400 mx-2">•</span>
+                    <span className="text-[12px] text-black/50">{article.time}</span>
+                </div>
+                </div>
             </div>
+            ))}
+        </div>
 
-            {/* Text Content */}
-            <div className="p-4 md:p-6">
-              <p className="text-sm md:text-[16px] font-bold text-black mb-3 truncate leading-tight line-clamp-3">
-                {article.title}
-              </p>
-              <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-0">
-                <span className="text-[12px] text-black/50 font-medium">{article.author}</span>
-                <span className="hidden sm:inline text-xs text-gray-400 mx-2">•</span>
-                <span className="text-[12px] text-black/50 font-medium">{article.category}</span>
-                <span className="hidden sm:inline text-xs text-gray-400 mx-2">•</span>
-                <span className="text-[12px] text-black/50">{article.time}</span>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {/* View More */}
-      <div className="flex justify-center my-6">
-        <p className="text-[12px] font-medium text-white cursor-pointer hover:underline">
-          View more
-        </p>
-      </div>
-    </section>
+        {/* View More */}
+        <div className="flex justify-center my-6">
+            <p className="text-[12px] font-medium text-white cursor-pointer hover:underline">
+            View more
+            </p>
+        </div>
+        </section>
+    </div>
   );
 }
